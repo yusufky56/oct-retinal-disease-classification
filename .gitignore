@@ -1,0 +1,15 @@
+# Generated outputs (checkpoints, logs, figures) - the patient-disjoint splits are kept
+outputs/*
+!outputs/splits/
+
+# Dataset
+data/
+*.zip
+
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.pt
+*.pth
+.cache/

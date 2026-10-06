@@ -1,0 +1,21 @@
+{
+  "backbone": "convnextv2_tiny.fcmae_ft_in22k_in1k",
+  "pretrained": true,
+  "num_classes": 4,
+  "image_size": 224,
+  "epochs": 30,
+  "batch_size": 32,
+  "num_workers": 2,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.05,
+  "warmup_epochs": 5,
+  "grad_clip": 1.0,
+  "loss_type": "weighted_ce",
+  "label_smoothing": 0.1,
+  "amp_enabled": true,
+  "amp_dtype": "bfloat16",
+  "save_dir": "outputs/runs",
+  "log_every_n_batches": 50,
+  "seed": 42,
+  "splits_dir": "outputs/splits"
+}

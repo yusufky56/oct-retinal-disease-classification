@@ -1,0 +1,112 @@
+{
+  "best_epoch": 21,
+  "best_val_macro_f1": 0.8775038829913318,
+  "test_metrics": {
+    "loss": 0.5700410306453705,
+    "accuracy": 0.987603305785124,
+    "macro_f1": 0.9876299807124941,
+    "weighted_f1": 0.9876299807124941,
+    "cohen_kappa": 0.9834710743801653,
+    "cnv_f1": 0.979757085020243,
+    "dme_f1": 0.9937629937629938,
+    "drusen_f1": 0.9811320754716981,
+    "normal_f1": 0.9958677685950413
+  },
+  "test_classification_report": {
+    "CNV": {
+      "precision": 0.9603174603174603,
+      "recall": 1.0,
+      "f1-score": 0.979757085020243,
+      "support": 242.0
+    },
+    "DME": {
+      "precision": 1.0,
+      "recall": 0.987603305785124,
+      "f1-score": 0.9937629937629938,
+      "support": 242.0
+    },
+    "DRUSEN": {
+      "precision": 0.9957446808510638,
+      "recall": 0.9669421487603306,
+      "f1-score": 0.9811320754716981,
+      "support": 242.0
+    },
+    "NORMAL": {
+      "precision": 0.9958677685950413,
+      "recall": 0.9958677685950413,
+      "f1-score": 0.9958677685950413,
+      "support": 242.0
+    },
+    "accuracy": 0.987603305785124,
+    "macro avg": {
+      "precision": 0.9879824774408914,
+      "recall": 0.987603305785124,
+      "f1-score": 0.9876299807124941,
+      "support": 968.0
+    },
+    "weighted avg": {
+      "precision": 0.9879824774408913,
+      "recall": 0.987603305785124,
+      "f1-score": 0.9876299807124941,
+      "support": 968.0
+    }
+  },
+  "test_confusion_matrix": [
+    [
+      242,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      239,
+      0,
+      1
+    ],
+    [
+      8,
+      0,
+      234,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      241
+    ]
+  ],
+  "model_info": {
+    "total_params": 303305732,
+    "trainable_params": 1576964
+  },
+  "config": {
+    "num_classes": 4,
+    "image_size": 224,
+    "use_lora": true,
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "drop_path_rate": 0.2,
+    "checkpoint_dir": "outputs/checkpoints",
+    "auto_download": true,
+    "epochs": 30,
+    "batch_size": 16,
+    "num_workers": 2,
+    "learning_rate": 0.0005,
+    "weight_decay": 0.05,
+    "warmup_epochs": 5,
+    "grad_clip": 1.0,
+    "layer_decay": 0.65,
+    "loss_type": "weighted_ce",
+    "label_smoothing": 0.1,
+    "amp_enabled": true,
+    "amp_dtype": "bfloat16",
+    "gradient_checkpointing": true,
+    "save_dir": "outputs/runs",
+    "log_every_n_batches": 50,
+    "seed": 42,
+    "splits_dir": "outputs/splits"
+  },
+  "total_train_time_sec": 45709.46803689003
+}

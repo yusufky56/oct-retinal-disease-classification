@@ -1,0 +1,184 @@
+{
+  "timestamp": "2026-04-26T15:14:56.581800",
+  "total_images": 84484,
+  "total_patients": 4657,
+  "classes": [
+    "CNV",
+    "DME",
+    "DRUSEN",
+    "NORMAL"
+  ],
+  "class_distribution_total": {
+    "CNV": 37455,
+    "NORMAL": 26565,
+    "DME": 11598,
+    "DRUSEN": 8866
+  },
+  "class_imbalance_ratio_max_over_min": 4.22,
+  "original_kermany_v2_split": {
+    "train": {
+      "total_images": 83484,
+      "total_patients": 4590,
+      "per_class_images": {
+        "CNV": 37205,
+        "DME": 11348,
+        "DRUSEN": 8616,
+        "NORMAL": 26315
+      }
+    },
+    "val": {
+      "total_images": 32,
+      "total_patients": 25,
+      "per_class_images": {
+        "CNV": 8,
+        "DME": 8,
+        "DRUSEN": 8,
+        "NORMAL": 8
+      }
+    },
+    "test": {
+      "total_images": 968,
+      "total_patients": 609,
+      "per_class_images": {
+        "CNV": 242,
+        "DME": 242,
+        "DRUSEN": 242,
+        "NORMAL": 242
+      }
+    }
+  },
+  "leakage_audit_original_split": {
+    "test_patients_total": 609,
+    "test_patients_also_in_train_or_val": 546,
+    "leakage_percentage_of_test_patients": 89.66,
+    "contaminated_train_val_images": 27693,
+    "contaminated_percentage_of_training_data": 33.16
+  },
+  "new_patient_level_split": {
+    "train": {
+      "total_images": 45146,
+      "total_patients": 3348,
+      "per_class_images": {
+        "CNV": 18361,
+        "DME": 5079,
+        "DRUSEN": 2833,
+        "NORMAL": 18873
+      },
+      "per_class_patients": {
+        "CNV": 481,
+        "DME": 440,
+        "DRUSEN": 403,
+        "NORMAL": 2573
+      }
+    },
+    "val": {
+      "total_images": 10677,
+      "total_patients": 700,
+      "per_class_images": {
+        "CNV": 4007,
+        "DME": 1825,
+        "DRUSEN": 1033,
+        "NORMAL": 3812
+      },
+      "per_class_patients": {
+        "CNV": 131,
+        "DME": 137,
+        "DRUSEN": 123,
+        "NORMAL": 542
+      }
+    },
+    "test": {
+      "total_images": 968,
+      "total_patients": 609,
+      "per_class_images": {
+        "CNV": 242,
+        "DME": 242,
+        "DRUSEN": 242,
+        "NORMAL": 242
+      },
+      "per_class_patients": {
+        "CNV": 122,
+        "DME": 161,
+        "DRUSEN": 137,
+        "NORMAL": 213
+      }
+    }
+  },
+  "new_split_leakage_check": {
+    "train_vs_val": 0,
+    "train_vs_test": 0,
+    "val_vs_test": 0
+  },
+  "image_size_statistics": {
+    "CNV": {
+      "width": {
+        "mean": 720.64,
+        "std": 330.73779318244834,
+        "min": 512,
+        "median": 512.0,
+        "max": 1536
+      },
+      "height": {
+        "mean": 496.0,
+        "std": 0.0,
+        "min": 496,
+        "median": 496.0,
+        "max": 496
+      }
+    },
+    "DME": {
+      "width": {
+        "mean": 564.48,
+        "std": 195.95366491589246,
+        "min": 512,
+        "median": 512.0,
+        "max": 1536
+      },
+      "height": {
+        "mean": 508.24,
+        "std": 6.801004950866345,
+        "min": 496,
+        "median": 512.0,
+        "max": 512
+      }
+    },
+    "DRUSEN": {
+      "width": {
+        "mean": 666.88,
+        "std": 266.5840220343674,
+        "min": 512,
+        "median": 512.0,
+        "max": 1536
+      },
+      "height": {
+        "mean": 496.0,
+        "std": 0.0,
+        "min": 496,
+        "median": 496.0,
+        "max": 496
+      }
+    },
+    "NORMAL": {
+      "width": {
+        "mean": 668.16,
+        "std": 301.25708882587173,
+        "min": 512,
+        "median": 512.0,
+        "max": 1536
+      },
+      "height": {
+        "mean": 500.56,
+        "std": 7.24075567282641,
+        "min": 496,
+        "median": 496.0,
+        "max": 512
+      }
+    }
+  },
+  "headline_findings": [
+    "Kermany v2 splitinde test hastalarının %89.66'si (546/609) train+val setlerinde de mevcut — Tampu et al. 2022 ampirik olarak doğrulandı.",
+    "Sınıf dengesizliği orta seviye: 4.22x (CNV vs DRUSEN).",
+    "Görüntü boyutları sabit yükseklik (~496-512px), değişken genişlik (512-1536px) — resize stratejisi dikkat gerektirir.",
+    "Yeni hasta-seviyeli split tüm split çiftleri için sıfır hasta örtüşmesi sağlıyor."
+  ]
+}
