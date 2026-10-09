@@ -73,3 +73,7 @@ Trained on a single RTX 3060.
 4. For RETFound, request access at [YukunZhou/RETFound_mae_natureOCT](https://huggingface.co/YukunZhou/RETFound_mae_natureOCT) and set `HF_TOKEN`.
 
 Training curves, per-class reports and configs for both runs are in [`results/`](results).
+
+## License
+
+[MIT](LICENSE). The MIT license covers the source code. Figures that appear in the published paper may be subject to the publisher's copyright and are not covered by this license. Datasets belong to their original authors.
